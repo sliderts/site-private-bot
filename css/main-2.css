@@ -1,0 +1,714 @@
+﻿/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');*/
+
+@font-face {
+    font-family: dbold;
+    src: local('Greycliff CF Demi Bold'), local('Greycliff-CF-Demi-Bold'),
+        url('../other/demibold/GreycliffCF-DemiBold.woff2') format('woff2'),
+        url('../other/demibold/GreycliffCF-DemiBold.woff') format('woff'),
+        url('../other/demibold/GreycliffCF-DemiBold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: bold;
+    src: local('Greycliff CF Bold'), local('Greycliff-CF-Bold'),
+        url('../other/bold/GreycliffCF-Bold.woff2') format('woff2'),
+        url('../other/bold/GreycliffCF-Bold.woff') format('woff'),
+        url('../other/bold/GreycliffCF-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: medium;
+    src: local('Greycliff CF Medium'), local('Greycliff-CF-Medium'),
+        url('../other/medium/GreycliffCF-Medium.woff2') format('woff2'),
+        url('../other/medium/GreycliffCF-Medium.woff') format('woff'),
+        url('../other/medium/GreycliffCF-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: regular;
+    src: local('Greycliff CF Regular'), local('Greycliff-CF-Regular'),
+        url('../other/regular/GreycliffCF-Regular.woff2') format('woff2'),
+        url('../other/regular/GreycliffCF-Regular.woff') format('woff'),
+        url('../other/regular/GreycliffCF-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+::-webkit-scrollbar-track {
+background: #13151b;
+}
+
+::-webkit-scrollbar-thumb {
+background: linear-gradient(135deg, #00b7ff, #0046c9);
+border-radius: 20px;
+}
+
+::-webkit-scrollbar-button {
+display: none;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: dbold, sans-serif;
+    background: rgb(19, 21, 27);
+    transition: all 0.3s ease-in-out;
+}
+  
+
+:root {
+    --main-color: linear-gradient(135deg, #00b7ff, #0046c9);
+    --glavny-color: #0077ff;
+    --dark-color: #0f0f0f;
+    --light-dark-color: #333333;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 14%;
+    left: 0;
+    transition: 0.3s ease;
+}
+
+header.sticky {
+    padding: 16px 14%;
+    background: #13151bd5;
+    box-shadow: 0 0 20px #0000003e;
+    border-bottom: 1px solid #2c2f35;
+    backdrop-filter: blur(11px);
+}
+
+header .navlist {
+    display: flex;
+}
+
+header .logo {
+    font-family: dbold;
+    color: #fff;
+    font-size: 20px;
+}
+
+header a.active {
+    color: var(--main-color);   
+}
+
+header .logo span {
+    font-size: 14px;
+    font-family: medium;
+    vertical-align: middle;
+    padding: 3px 7px 3px 7px;
+    border-radius: 5px;
+    margin-left: 5px;
+    background: var(--main-color);
+}
+
+header .navlist a {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 25px;
+    transition: all 0.3s ease;
+}
+header .navlist a:hover {
+    color: #cacaca;
+}
+
+header .navlist .login {
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 6px 8px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #00b7ff, #0046c9);
+}
+
+header .navlist .login:hover {
+    background: linear-gradient(135deg, #00b7ff, #0046c9);
+}
+
+header .navlist .login:hover {
+    color: #fff;
+}
+
+/*#gradient1 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(130deg, #2680fe, #00000000, #00000000);
+    background-size: 200% 200%;
+    animation: Animation 5s ease-in-out infinite;
+}
+
+#gradient2 {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    font-size:30px;
+    background: linear-gradient(310deg, #2680fe, #00000000, #00000000);
+    background-size: 200% 200%;
+    animation: Animation2 5s ease-in-out infinite;
+}
+
+@keyframes Animation { 
+    0%{background-position:100% 0%}
+    50%{background-position:100% 20%}
+    100%{background-position:100% 0%}
+}
+
+@keyframes Animation2 { 
+    0%{background-position:30% 0%}
+    50%{background-position:30% 20%}
+    100%{background-position:30% 0%}
+}
+*/
+
+/* Секция #1 - Главная страница */
+
+#main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 160px 14% 120px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #fff;
+}
+
+#main .page-text img{
+    width: 520px;
+    position: absolute;
+    right: 14%;
+    top: 35%;
+    border-radius: 10px;
+    box-shadow: 0 0 30px #00000089;
+    border: 1px solid #42424244;
+    object-fit: cover;
+}
+
+#main .page-text h1 {
+    font-family: bold;
+    color: #ffffff;
+    font-size: 58px;
+    line-height: 1.02;
+    font-weight: 700;
+    margin-bottom: 34px;
+}
+
+
+#main .page-text p {
+    font-family: regular;
+    color: #dcdcdc;
+    font-size: 17px;
+    line-height: 1.40;
+    margin-bottom: 34px;
+}
+
+
+#main .page-text .minecraft {
+    background: linear-gradient(135deg, #00b7ff, #0046c9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#main .page-text .main-btn {
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 12px;
+    background: var(--main-color);
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 20px #0000003e;
+}
+
+#main .page-text .main-btn:hover {
+    background: linear-gradient(135deg, #00b7ff, #0046c9);
+}
+
+#main .page-text .faq {
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 12px;
+    margin-left: 5px;
+    background: none;
+}
+
+#main .page-text .main-btn span {
+    vertical-align: middle;
+}
+
+#main .page-text .anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s ease-in-out forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+  
+@media (max-width: 1700px) {
+    #main .page-text img {
+        width: 480px;
+    }
+}
+
+@media (max-width: 1600px) {
+    #showcase .video-text video {
+        width: 470px;
+
+    }
+}
+
+@media (max-width: 1500px) {
+    #main .page-text img {
+        display: none;
+    }
+}
+
+@media (max-width: 1480px) {
+    #whyus .container .wbox {
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 1380px) {
+    #showcase .video-text video {
+        display: none;
+    }
+}
+
+@media (max-width: 880px) {
+    #main .page-text h1 {
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+    #main .page-text p {
+        font-size: 16px;
+    }
+    header .navlist {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    #main {
+        padding: 160px 8% 120px;
+    }
+
+    header {
+        padding: 22px 8%;
+    }
+    header.sticky {
+        padding: 16px 8%;
+    }
+
+    #whyus .container .wbox {
+        margin-bottom: 20px;
+    }
+    #whyus {
+        padding: 0 8% 120px;
+    }
+
+}
+
+@media (max-width: 620px) {
+    #main .page-text h1 {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    #main .page-text p {
+        font-size: 14px;
+    }
+}
+
+
+
+
+.gradient {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(16, 19, 21, 0.6), rgba(16, 19, 21, 0.6));
+}
+
+.transition {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 45%, #13151b);
+}
+
+.bg-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/Crystal.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #13151b55;
+    backdrop-filter: blur(18px);
+    background-size: cover;
+    background-position: center;
+    z-index: 1001;
+}
+
+
+ 
+.preloader__row {
+    position: relative;
+    accent-color: #fff;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-top: -35px;
+    margin-left: -35px;
+    text-align: center;
+    animation: preloader-rotate 2s infinite ease-in-out;
+}
+ 
+.preloader__item {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    background-color: var(--main-color);
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    animation: preloader-bounce 2s infinite ease-in-out;
+}
+ 
+.preloader__item:last-child {
+    top: auto;
+    bottom: 0;
+    animation-delay: -1s;
+}
+ 
+@keyframes preloader-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+ 
+@keyframes preloader-bounce {
+    0%,
+    100% {
+        transform: scale(0);
+    }
+ 
+    50% {
+        transform: scale(1);
+    }
+}
+ 
+.loaded_hiding .preloader {
+    transition: 0.5s opacity;
+    opacity: 0;
+}
+ 
+.loaded .preloader {
+    display: none;
+}
+
+
+/* Секция #2 - Почему именно мы? */
+
+#whyus {
+    position: relative;
+    text-align: center;
+    padding: 0 16% 120px;
+}
+
+#whyus .sec-title {
+    font-family: bold;
+    color: #fff;
+    font-size: 33px;
+    margin-bottom: 38px;
+}
+
+#whyus .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#whyus .container .wbox {
+    width: 23%;
+    min-width: 250px;
+    position: relative;
+    padding: 20px 40px 25px 40px;
+    border-radius: 13px;
+    background: #13151bd5;
+    box-shadow: 0 3px 20px #00000072;
+    border: 1px solid #2c2f35;
+    transition: 0.14s ease-in-out;
+    cursor: default;
+    user-select: none;
+}
+
+#whyus .container .wbox:hover{
+    transform: scale(1.03);
+    background: #16181f;
+}
+
+#whyus .container .wbox .title {
+    color: #f0f8ff;
+    font-family: bold;
+    margin-bottom: 10px;
+}
+
+#whyus .container .wbox .desc {
+    font-family: regular;
+    color: #abaeb1;
+}
+
+
+/* Секция 3 - Видеообзор */
+
+#showcase {
+    position: relative;
+    width: 100%;
+    padding: 130px 14% 120px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #fff;
+    background: rgb(18, 20, 26);
+}
+
+#showcase .video-text video {
+    width: 520px;
+    position: absolute;
+    right: 15%;
+    top: 20%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00000089;
+}
+
+#showcase .video-text .main-text {
+    font-family: bold;
+    color: #ffffff;
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+
+#showcase .video-text .desc-text {
+    font-family: regular;
+    color: #abaeb1;
+    font-size: 17px;
+    line-height: 1.40;
+    margin-bottom: 29px;
+}
+
+#showcase .video-text .install-btn {
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 12px;
+    background: var(--main-color);
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 20px #0000003e;
+}
+
+#showcase .video-text .install-btn:hover {
+    background: linear-gradient(135deg, #00b7ff, #0046c9);    background: linear-gradient(135deg, #00b7ff, #0046c9);
+}
+
+#showcase .video-text .install-btn span {
+    vertical-align: middle;
+}
+
+#showcase .video-text .watch {
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 12px;
+    margin-left: 5px;
+    background: none;
+}
+
+/* Секция 4 - Установка клиента */
+
+#inst-client {
+    position: relative;
+    text-align: center;
+    padding: 60px 16% 0px;
+}
+
+#inst-client .inst-text {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#inst-client .inst-text .title {
+    font-family: bold;
+    color: #fff;
+    font-size: 33px;
+    margin-bottom: 12px;
+}
+
+#inst-client .inst-text .desc {
+    font-family: regular;
+    color: #abaeb1;
+    font-size: 16px;
+    line-height: 1.40;
+    margin-bottom: 24px;
+}
+
+#inst-client .inst-text .install {
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 12px;
+    background: var(--main-color);
+    border-radius: 8px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 20px #0000003e;
+}
+#inst-client .inst-text .install:hover {
+    background: linear-gradient(135deg, #00b7ff, #0046c9);    background: linear-gradient(135deg, #00b7ff, #0046c9);
+}
+
+#inst-client .inst-text .install span {
+    vertical-align: middle;
+}
+
+#inst-client .inst-text .faq {
+    color: #fff;
+    padding: 8px 12px;
+    margin-left: 3px;
+    margin-right: 3px;
+    background: none;
+}
+
+#inst-client .inst-sup {
+    padding-top: 16px;
+}
+
+/* Секция 4 - Залупа бесполезная */
+
+#join-us {
+    position: relative;
+    text-align: left;
+    padding: 80px 14% 80px;
+}
+
+#join-us .con-text .con-title{
+    font-family: bold;
+    color: #fff;
+    text-align: center;
+    font-size: 33px;
+    margin-bottom: 38px;
+}
+
+#join-us .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#join-us .container .con-box {
+    width: 23%;
+    display: flex;
+    min-width: 250px;
+    position: relative;
+    padding: 20px 40px 20px 25px;
+    border-radius: 13px;
+    background: #13151bd5;
+    box-shadow: 0 3px 20px #00000072;
+    border: 1px solid #2c2f35;
+    transition: 0.14s ease-in-out;
+    cursor: default;
+    user-select: none;
+}
+
+#join-us .container .con-box img {
+    vertical-align: middle;
+}
+
+#join-us .container .con-box:hover{
+    transform: scale(1.03);
+    background: #16181f;
+}
+
+#join-us .container .con-box .title {
+    color: #f0f8ff;
+    font-family: regular;
+    margin-bottom: 3px;
+}
+
+#join-us .container .con-box .desc {
+    font-family: bold;
+    font-size: 23px;
+    color: #fff;
+}
+
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.snowflake {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 2;
+}
